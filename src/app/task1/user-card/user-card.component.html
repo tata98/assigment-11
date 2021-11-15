@@ -1,0 +1,10 @@
+<div class="card text-white" *ngIf="user" appTask1 [initialColor]="getColor(user)" >
+    <div class="card-header">
+      {{user.status}}
+    </div>
+    <div class="card-body text-white">
+      <h5 class="card-title">{{user.firstname}} {{user.lastName}}</h5>
+      <p class="card-text">{{user.birthDate | task1}} years old</p>
+      <p class="card-text">{{user.about}}</p>
+    </div>
+</div>

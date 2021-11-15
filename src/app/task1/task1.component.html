@@ -1,0 +1,12 @@
+<div class="container shadow mt-5 p-3">
+    <h2>task 1</h2>
+    <button (click)="getUsers()" type="button" class="btn btn-primary mb-3">load users</button>
+    <div class="row g-4 mb-3" *ngIf="users?.length; else listEmpty">
+        <app-user-card class="col-md-4" *ngFor="let user of users" [user]="user"></app-user-card>
+    </div>
+</div>
+
+<ng-template #listEmpty>
+    <h5 *ngIf="loading">loading...</h5>
+    <h5 *ngIf="!loading">list is empty</h5>
+</ng-template>
